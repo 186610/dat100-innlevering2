@@ -70,7 +70,7 @@ public class Tabeller {
 
 	// f)
 	public static int[] reverser(int[] tabell) {
-
+		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
 		
 	}
 

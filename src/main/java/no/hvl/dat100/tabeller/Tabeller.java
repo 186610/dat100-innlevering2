@@ -70,8 +70,13 @@ public class Tabeller {
 
 	// f)
 	public static int[] reverser(int[] tabell) {
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
+		int[] reversert = new int[tabell.length];
 		
+		for (int i = 0; i < tabell.length; i++) {
+			reversert[tabell.length - 1 - i] = tabell[i];
+		}
+		
+		return reversert;
 	}
 
 	// g)
@@ -91,9 +96,17 @@ public class Tabeller {
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
-
+		int sammenSatt[] = new int[tabell1.length + tabell2.length];
+		
+		for (int i = 0; i < tabell1.length; i++) {
+			sammenSatt[i] = tabell1[i];
+		}
+		
+		for (int i = 0; i < tabell2.length; i++) {
+			sammenSatt[tabell1.length + i] = tabell2[i];
+		}
+		
+		return sammenSatt;
 	}
+	
 }

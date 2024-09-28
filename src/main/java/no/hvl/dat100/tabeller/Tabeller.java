@@ -4,53 +4,89 @@ public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
-
+		System.out.print("[");
+		
+		for (int i = 0; i < tabell.length; i++) {
+			System.out.print(tabell[i]);
+			
+			if (i < tabell.length - 1) {
+				System.out.print(",");
+			}
+		}
+		
+		System.out.print("]");
 	}
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		String streng = "[";
+		
+		for (int i = 0; i < tabell.length; i++) {
+			streng += tabell[i];
+			
+			if (i < tabell.length - 1) {
+				streng += ",";
+			}
+		}
+		
+		streng += "]";
+		return streng;
+	
 	}
 
+	
 	// c)
 	public static int summer(int[] tabell) {
+		int summer = 0;
+		
+		for(int tall : tabell) {
+			summer += tall;
+		}
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		return summer;
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
+		for(int verdi : tabell) {
+			if (verdi == tall) {
+				return true;
+			}
+		} 
+		
+		return false;
 	}
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+		for(int i = 0; i < tabell.length; i++) {
+			if (tall == tabell[i]) {
+				return i;
+			}
+		}
+		
+		return -1;
 	}
 
 	// f)
 	public static int[] reverser(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
+		
 	}
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+		boolean sortert = true;
+		int i = 1;
+		while (sortert && i < tabell.length) {
+			if (tabell[i-1] <= tabell[i]) {
+				i++;
+			} else {
+				sortert = false;
+			}
+			
+		}
+	return sortert;
 	}
 
 	// h)
